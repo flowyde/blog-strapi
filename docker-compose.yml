@@ -1,0 +1,14 @@
+services:
+  blog-strapi-api:
+    container_name: blog-strapi-api
+    hostname: blog-strapi-api
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: senha
+      POSTGRES_DB: blog-strapi
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+     - C:/PosgressData/postgresonly/blog-strapi-api:/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
